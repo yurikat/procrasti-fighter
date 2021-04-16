@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #424242;
+    font-family: "Roboto", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "Meiryo UI",
+        Meiryo, "ＭＳ ゴシック", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(61, 90, 128);
+}
+
+.navigation{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: rgb(152, 193, 217);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.navigation:hover,
+.navigation.active{
+    width: 160px;
+}
+
+
+.navigation ul{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover{
+    background-color: rgb(41, 50, 65);
+}
+
+.navigation ul li a:hover{
+    color: #fff;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:rgb(41, 50, 65);
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 60px;
+    height:60px;
+    background-color: rgb(61, 90, 128);
+    cursor: pointer;
+}
+
+.toggle.active{
+    background-color: rgb(41, 50, 65);
+}
+
+.toggle:before{
+    content:'\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px; 
+    text-align:center;
+    font-size: 24px;
+    color: #fff;
+    z-index: 100;
+}
+
+.toggle.active:before{
+    content: '\f00d';
+}
+
+@media(max-width:767px){
+    .navigation{
+        left:-60px;
+    }
+    .navigation.active{
+        left: 0px;
+        width: 100%;
+    }
+}
+
+.bulletin{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(97, 165, 194);
+    padding-top: 10px;
+    z-index: 3;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.taskContent{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.bulletin ul, li{
+    list-style: none;
+}
+
+.bulletin ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.bulletin ul li a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:15em;
+    width:15em;
+    padding:1em;
+    margin: 0;
+}
+
+.bulletin ul li{
+    margin: 1em;
+}
+
+.schedule{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(169, 214, 229);
+    padding-left: 75px;
+}
+
+.trash{
+    z-index: 900;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
